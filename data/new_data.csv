@@ -1,0 +1,109 @@
+name,city,course,fees,avg_package,ranking,exam,type
+IIT Delhi,Delhi,B.Tech (Computer Science),220000,1900000,2,JEE Advanced,Government
+IIT Bombay,Mumbai,B.Tech (Electrical Engineering),225000,2100000,1,JEE Advanced,Government
+IIT Madras,Chennai,B.Tech (Mechanical Engineering),210000,1800000,3,JEE Advanced,Government
+IIM Ahmedabad,Ahmedabad,MBA,2500000,3500000,1,CAT,Government
+IIM Bangalore,Bangalore,MBA,2400000,3200000,2,CAT,Government
+FMS Delhi,Delhi,MBA,20000,2800000,5,CAT,Government
+BITS Pilani,Pilani,B.Tech (Computer Science),450000,1600000,15,BITSAT,Private
+VIT Vellore,Vellore,B.Tech (Computer Science),400000,1300000,25,VITEEE,Private
+Manipal Institute of Technology,Manipal,B.Tech (Information Technology),380000,1100000,30,MET,Private
+NIT Trichy,Trichy,B.Tech (Civil Engineering),150000,1400000,8,JEE Main,Government
+NIT Warangal,Warangal,B.Tech (Electronics),155000,1350000,10,JEE Main,Government
+IIIT Hyderabad,Hyderabad,B.Tech (Computer Science),300000,1600000,12,JEE Main,Government
+DTU Delhi,Delhi,B.Tech (Electronics),180000,1200000,20,JEE Main,Government
+PES University,Bangalore,B.Tech (Computer Science),350000,1000000,35,PESSAT,Private
+SRM Institute of Science and Technology,Chennai,B.Tech (Computer Science),300000,900000,40,SRMJEEE,Private
+Symbiosis Institute of Business Management,Pune,MBA,2200000,1500000,20,SNAP,Private
+IMT Ghaziabad,Ghaziabad,MBA,1950000,1400000,22,CAT,Private
+XLRI Jamshedpur,Jamshedpur,MBA,2500000,2800000,6,XAT,Private
+IIT Kanpur,Kanpur,B.Tech (Aerospace Engineering),215000,1750000,4,JEE Advanced,Government
+IIT Kharagpur,Kharagpur,B.Tech (Metallurgical Engineering),205000,1650000,5,JEE Advanced,Government
+IIT Roorkee,Roorkee,B.Tech (Civil Engineering),212000,1720000,6,JEE Advanced,Government
+IIM Calcutta,Kolkata,MBA,2600000,3100000,3,CAT,Government
+IIM Lucknow,Lucknow,MBA,2300000,2900000,4,CAT,Government
+SPJIMR Mumbai,Mumbai,MBA,2000000,2600000,7,CAT,Private
+MDI Gurgaon,Gurgaon,MBA,2150000,2400000,8,CAT,Private
+NMIMS Mumbai,Mumbai,MBA,2000000,2300000,10,NMAT,Private
+IIIT Delhi,Delhi,B.Tech (Computer Science),250000,1500000,28,JEE Main,Government
+NIT Surat,Surat,B.Tech (Mechanical Engineering),160000,1100000,18,JEE Main,Government
+Thapar University,Patiala,B.Tech (Electronics),390000,1050000,32,JEE Main,Private
+Christ University,Bangalore,B.Com,150000,600000,7,CUET,Private
+Delhi University (DU),Delhi,B.A. (Hons) Economics,15000,700000,9,CUET,Government
+Jawaharlal Nehru University (JNU),Delhi,M.A. (International Relations),10000,500000,11,CUET,Government
+SRCC (Delhi University),Delhi,B.Com (Hons),18000,1000000,1,CUET,Government
+BITS Goa,Goa,B.Tech (Computer Science),450000,1600000,16,BITSAT,Private
+IIIT Bangalore,Bangalore,M.Tech (Computer Science),275000,1800000,13,GATE,Government
+IISc Bangalore,Bangalore,B.Sc (Research),30000,1200000,1,JEE Advanced,Government
+University of Hyderabad,Hyderabad,M.A. (Economics),18000,450000,20,CUET,Government
+St. Stephen's College,Delhi,B.A. (Hons) History,25000,650000,8,CUET,Government
+Loyola College,Chennai,B.Sc (Physics),22000,400000,12,CUET,Private
+Presidency College,Chennai,B.A. (English),10000,350000,15,CUET,Government
+Anna University,Chennai,B.Tech (Information Technology),100000,800000,17,TNEA,Government
+Mumbai University,Mumbai,B.Com,18000,400000,22,MAH-CET,Government
+VJTI Mumbai,Mumbai,B.Tech (Mechanical Engineering),85000,750000,26,MAH-CET,Government
+ICT Mumbai,Mumbai,B.Tech (Chemical Engineering),80000,900000,27,JEE Main,Government
+Jadavpur University,Kolkata,B.E. (Computer Science),12000,1100000,14,WBJEE,Government
+Presidency University,Kolkata,B.Sc (Chemistry),15000,450000,19,PUBDET,Government
+Amity University,Noida,B.Tech (Biotechnology),250000,600000,50,AMITY JEE,Private
+Shiv Nadar University,Greater Noida,B.Tech (Computer Science),420000,1300000,45,SNUSAT,Private
+Ashoka University,Sonipat,B.A. (Liberal Arts),900000,1500000,4,SAT,Private
+Azim Premji University,Bangalore,B.Sc (Physics),200000,500000,38,APU-CET,Private
+KIIT University,Bhubaneswar,B.Tech (Computer Science),350000,800000,36,KIITEE,Private
+Amrita Vishwa Vidyapeetham,Coimbatore,B.Tech (Computer Science),300000,1100000,23,AEEE,Private
+SRM University AP,Amaravati,B.Tech (Computer Science),280000,850000,42,SRMJEEE,Private
+LPU Jalandhar,Jalandhar,B.Tech (Mechanical Engineering),150000,600000,60,LPUNEST,Private
+Chandigarh University,Chandigarh,B.Tech (Civil Engineering),160000,700000,55,CUCET,Private
+Manipal University Jaipur,Jaipur,B.Tech (Electronics),250000,800000,65,MET,Private
+Vellore Institute of Technology,Bhopal,B.Tech (Computer Science),380000,1200000,70,VITEEE,Private
+Galgotias University,Greater Noida,B.Tech (Computer Science),180000,500000,80,GUSET,Private
+Bennett University,Greater Noida,B.Tech (Computer Science),400000,1000000,48,SAT,Private
+NIIT University,Neemrana,B.Tech (Data Science),300000,900000,75,NUAT,Private
+Banasthali Vidyapith,Tonk,B.Tech (Computer Science),150000,500000,72,JEE Main,Private
+Kalinga Institute of Industrial Technology,Bhubaneswar,B.Tech (Electronics),350000,850000,37,KIITEE,Private
+Amrita School of Engineering,Coimbatore,B.Tech (Computer Science),300000,1100000,24,AEEE,Private
+SRM Institute of Technology,Amaravati,B.Tech (Computer Science),280000,850000,43,SRMJEEE,Private
+Lovely Professional University,Jalandhar,B.Tech (Mechanical Engineering),150000,600000,61,LPUNEST,Private
+Chandigarh University,Chandigarh,B.Tech (Civil Engineering),160000,700000,56,CUCET,Private
+Manipal University Jaipur,Jaipur,B.Tech (Electronics),250000,800000,66,MET,Private
+Vellore Institute of Technology,Bhopal,B.Tech (Computer Science),380000,1200000,71,VITEEE,Private
+Galgotias University,Greater Noida,B.Tech (Computer Science),180000,500000,81,GUSET,Private
+Bennett University,Greater Noida,B.Tech (Computer Science),400000,1000000,49,SAT,Private
+NIIT University,Neemrana,B.Tech (Data Science),300000,900000,76,NUAT,Private
+Banasthali Vidyapith,Tonk,B.Tech (Computer Science),150000,500000,73,JEE Main,Private
+IIT Madras,Chennai,B.Tech (Computer Science),205000,1950000,2,JEE Advanced,Government
+IIT Bombay,Mumbai,B.Tech (Computer Science),228000,2250000,1,JEE Advanced,Government
+IIT Delhi,Delhi,B.Tech (Mechanical Engineering),218000,1850000,3,JEE Advanced,Government
+IIM Ahmedabad,Ahmedabad,PGDM,2500000,3500000,1,CAT,Government
+IIM Bangalore,Bangalore,PGDM,2400000,3200000,2,CAT,Government
+FMS Delhi,Delhi,PGDM,20000,2800000,5,CAT,Government
+BITS Pilani,Pilani,B.E. (Mechanical Engineering),440000,1550000,16,BITSAT,Private
+VIT Vellore,Vellore,B.E. (Electronics),390000,1250000,26,VITEEE,Private
+Manipal Institute of Technology,Manipal,B.E. (Civil Engineering),370000,1050000,31,MET,Private
+NIT Trichy,Trichy,B.E. (Mechanical Engineering),152000,1380000,9,JEE Main,Government
+NIT Warangal,Warangal,B.E. (Electronics),157000,1330000,11,JEE Main,Government
+IIIT Hyderabad,Hyderabad,B.E. (Computer Science),305000,1620000,13,JEE Main,Government
+DTU Delhi,Delhi,B.E. (Computer Science),185000,1250000,21,JEE Main,Government
+PES University,Bangalore,B.E. (Electronics),340000,950000,36,PESSAT,Private
+SRM Institute of Science and Technology,Chennai,B.E. (Mechanical Engineering),290000,850000,41,SRMJEEE,Private
+Symbiosis Institute of Business Management,Pune,PGDM,2250000,1550000,21,SNAP,Private
+IMT Ghaziabad,Ghaziabad,PGDM,1980000,1450000,23,CAT,Private
+XLRI Jamshedpur,Jamshedpur,PGDM,2550000,2850000,7,XAT,Private
+IIT Kanpur,Kanpur,M.Tech (Computer Science),120000,1800000,4,GATE,Government
+IIT Kharagpur,Kharagpur,M.Tech (Electrical Engineering),115000,1700000,5,GATE,Government
+IIT Roorkee,Roorkee,M.Tech (Civil Engineering),118000,1750000,6,GATE,Government
+IIM Calcutta,Kolkata,PGDM,2650000,3150000,3,CAT,Government
+IIM Lucknow,Lucknow,PGDM,2350000,2950000,4,CAT,Government
+SPJIMR Mumbai,Mumbai,PGDM,2050000,2650000,8,CAT,Private
+MDI Gurgaon,Gurgaon,PGDM,2200000,2450000,9,CAT,Private
+NMIMS Mumbai,Mumbai,PGDM,2050000,2350000,11,NMAT,Private
+IIIT Delhi,Delhi,M.Tech (Computer Science),260000,1550000,29,GATE,Government
+NIT Surat,Surat,M.Tech (Mechanical Engineering),110000,1150000,19,GATE,Government
+Thapar University,Patiala,M.Tech (Electronics),190000,1100000,33,GATE,Private
+Christ University,Bangalore,B.Sc (Computer Science),155000,650000,8,CUET,Private
+Delhi University (DU),Delhi,B.Com (Hons),16000,750000,10,CUET,Government
+Jawaharlal Nehru University (JNU),Delhi,M.Sc (Physics),11000,550000,12,CUET,Government
+SRCC (Delhi University),Delhi,B.A. (Hons) Economics,19000,1050000,2,CUET,Government
+BITS Goa,Goa,M.Tech (Computer Science),220000,1650000,17,GATE,Private
+IIIT Bangalore,Bangalore,M.Sc (Computer Science),280000,1850000,14,GATE,Government
+IISc Bangalore,Bangalore,M.Sc (Chemistry),32000,1250000,2,GATE,Government

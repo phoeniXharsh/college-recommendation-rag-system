@@ -5,17 +5,22 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from database.vector_store import get_chroma_collection
-# from langchain_core.output_parsers import StrOutputParser
 
 # Load environment variables
 load_dotenv()
+
+# Get the Google API key from the environment
+google_api_key = os.getenv("GOOGLE_API_KEY")
+
+if not google_api_key:
+    raise ValueError("GOOGLE_API_KEY environment variable not set.")
 
 def create_rag_chain():
     """
     Creates and returns the RAG pipeline using LangChain.
     """
     # Initialize the LLM
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=google_api_key,temperature=0)
 
     # Get the LangChain Chroma vector store and create a retriever
     vector_store = get_chroma_collection()

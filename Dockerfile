@@ -1,19 +1,54 @@
-# Use an official lightweight Python image as a parent image
-FROM python:3.10-slim
+# Multi-stage Docker build for Render (512MB limit)
+# Stage 1: Build environment with all dependencies
+FROM python:3.10-slim as builder
 
-# Set the working directory in the container
+# Set build environment variables
+ENV PIP_NO_CACHE_DIR=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
 WORKDIR /app
 
-# Install dependencies from requirements.txt
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy requirements and install all dependencies
+COPY requirements.render.txt requirements.txt
+RUN pip install --user --no-cache-dir -r requirements.txt
 
-# Copy all the application code, including the pre-built chroma_db
-COPY . .
+# Stage 2: Runtime environment (minimal)
+FROM python:3.10-slim as runtime
 
-# Expose the port on which the app will run
-EXPOSE 8080
+# Set runtime environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PATH=/root/.local/bin:$PATH
 
-# The command to run the application
-# Removed ingest.py from build - data should be pre-ingested
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Install only runtime system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy Python packages from builder stage
+COPY --from=builder /root/.local /root/.local
+
+# Copy application code (only essential files)
+COPY main.py .
+COPY startup.py .
+COPY rag/ ./rag/
+COPY database/ ./database/
+COPY models/ ./models/
+COPY data/ ./data/
+COPY chroma_db/ ./chroma_db/
+COPY .env .
+
+# Use environment variable for port (Render requirement)
+EXPOSE $PORT
+
+# Command to run the application
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1

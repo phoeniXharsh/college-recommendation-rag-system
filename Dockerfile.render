@@ -45,7 +45,7 @@ COPY database/ ./database/
 COPY models/ ./models/
 COPY data/ ./data/
 COPY chroma_db/ ./chroma_db/
-COPY .env .
+# .env file not copied - use environment variables from platform
 
 # Use environment variable for port (Render requirement)
 EXPOSE $PORT

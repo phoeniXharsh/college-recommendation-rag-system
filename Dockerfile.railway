@@ -23,7 +23,7 @@ COPY rag/ ./rag/
 COPY database/ ./database/
 COPY models/ ./models/
 COPY chroma_db/ ./chroma_db/
-COPY .env .
+# .env file not copied - use environment variables from platform
 
 # Expose port
 EXPOSE 8080

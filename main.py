@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from rag.rag_chain import create_rag_chain
+from startup import check_and_ingest_data
 
 # Initialize FastAPI app
 app = FastAPI()
+
+# Check and ingest data if needed (runs once at startup)
+check_and_ingest_data()
 
 # Create the RAG chain instance
 rag_chain = create_rag_chain()

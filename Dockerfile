@@ -15,4 +15,5 @@ COPY . .
 EXPOSE 8080
 
 # The command to run the application
+# Removed ingest.py from build - data should be pre-ingested
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

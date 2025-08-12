@@ -36,4 +36,4 @@ def ingest_data(file_path: str, collection_name: str = "college_recommendations"
     print(f"Ingestion complete. {len(documents)} colleges added to the collection.")
 
 if __name__ == "__main__":
-    ingest_data("data/small_data.csv")
+    ingest_data("data/new_data.csv")

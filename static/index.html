@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            display: none;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+            display: none;
+        }
+        .examples {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        .example {
+            cursor: pointer;
+            padding: 5px;
+            margin: 5px 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .example:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>College Recommendation System</h1>
+
+        <label for="query">Enter your college query:</label>
+        <textarea id="query" placeholder="e.g., Suggest an MBA college in Bangalore with high placement and low fees"></textarea>
+
+        <button onclick="getRecommendations()">Get Recommendations</button>
+
+        <div id="loading" class="loading">Loading...</div>
+
+        <div id="result" class="result">
+            <h3>Recommendations:</h3>
+            <div id="resultContent"></div>
+        </div>
+
+        <div class="examples">
+            <h4>Example queries:</h4>
+            <div class="example" onclick="setQuery(this.textContent)">
+                Suggest an MBA college in Bangalore with high placement and low fees
+            </div>
+            <div class="example" onclick="setQuery(this.textContent)">
+                I want to study Computer Science B.Tech in Delhi. What are the best options?
+            </div>
+            <div class="example" onclick="setQuery(this.textContent)">
+                Show me private engineering colleges with good placements
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setQuery(text) {
+            document.getElementById('query').value = text;
+        }
+
+        function getRecommendations() {
+            const query = document.getElementById('query').value;
+            const button = document.querySelector('button');
+            const loading = document.getElementById('loading');
+            const result = document.getElementById('result');
+            const resultContent = document.getElementById('resultContent');
+
+            if (!query) {
+                alert('Please enter a query');
+                return;
+            }
+
+            button.disabled = true;
+            loading.style.display = 'block';
+            result.style.display = 'none';
+
+            fetch('/recommendations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultContent.innerHTML = data.response.replace(/\n/g, '<br>');
+                result.style.display = 'block';
+            })
+            .catch(error => {
+                resultContent.innerHTML = 'Error: ' + error.message;
+                result.style.display = 'block';
+            })
+            .finally(() => {
+                button.disabled = false;
+                loading.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
